@@ -3,6 +3,9 @@ import RootLayout from '../layouts/RootLayout';
 import Home from '../pages/Home';
 import Login from '../pages/Login';
 import Register from '../pages/Register';
+import Subjects from '../pages/Subjects';
+import SubjectDetail from '../pages/SubjectDetail';
+import Topics from '../pages/Topics';
 import NotFound from '../pages/NotFound';
 import ProtectedRoute from '../components/ProtectedRoute';
 
@@ -16,6 +19,30 @@ const router = createBrowserRouter([
         element: (
           <ProtectedRoute>
             <Home />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: 'subjects',
+        element: (
+          <ProtectedRoute>
+            <Subjects />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: 'subjects/:id',
+        element: (
+          <ProtectedRoute>
+            <SubjectDetail />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: 'topics',
+        element: (
+          <ProtectedRoute>
+            <Topics />
           </ProtectedRoute>
         ),
       },

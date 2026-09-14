@@ -3,6 +3,8 @@ import cors from 'cors';
 import { env } from './config/env.js';
 import healthRoutes from './routes/healthRoutes.js';
 import authRoutes from './routes/authRoutes.js';
+import subjectRoutes from './routes/subjectRoutes.js';
+import topicRoutes from './routes/topicRoutes.js';
 import { notFound } from './middleware/notFound.js';
 import { errorHandler } from './middleware/errorHandler.js';
 
@@ -15,6 +17,8 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use('/api/health', healthRoutes);
 app.use('/api/auth', authRoutes);
+app.use('/api/subjects', subjectRoutes);
+app.use('/api/topics', topicRoutes);
 
 app.use(notFound);
 app.use(errorHandler);

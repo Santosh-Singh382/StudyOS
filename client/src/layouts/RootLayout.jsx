@@ -30,13 +30,21 @@ export default function RootLayout() {
 
           <div className="flex items-center gap-2">
             <span className="mr-2 hidden rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-500 ring-1 ring-slate-200 sm:inline">
-              Phase 2 · Authentication
+              Phase 3 · Subjects &amp; Topics
             </span>
 
             {loading ? (
               <span className="h-8 w-20 animate-pulse rounded-lg bg-slate-100" />
             ) : isAuthenticated ? (
               <>
+                <nav className="hidden items-center gap-1 md:flex">
+                  <NavLink to="/subjects" className={navLinkClass}>
+                    Subjects
+                  </NavLink>
+                  <NavLink to="/topics" className={navLinkClass}>
+                    Topics
+                  </NavLink>
+                </nav>
                 <span className="text-sm font-medium text-slate-600">
                   {user.name}
                 </span>
@@ -69,7 +77,7 @@ export default function RootLayout() {
       <footer className="border-t border-slate-200 bg-white">
         <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-1 px-6 py-4 text-xs text-slate-400 sm:flex-row">
           <span>StudyOS · Personal Study Operating System</span>
-          <span>MERN Foundation</span>
+          <span>Subjects &amp; Topics · Phase 3</span>
         </div>
       </footer>
     </div>
