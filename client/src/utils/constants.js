@@ -40,3 +40,29 @@ export const PRIORITY_HEX = {
   MEDIUM: '#0ea5e9',
   HIGH: '#ef4444',
 };
+
+export const TASK_PRIORITIES = [
+  { value: 'LOW', label: 'Low' },
+  { value: 'MEDIUM', label: 'Medium' },
+  { value: 'HIGH', label: 'High' },
+  { value: 'URGENT', label: 'Urgent' },
+];
+
+export const TASK_STATUSES = [
+  { value: 'TODO', label: 'Todo' },
+  { value: 'IN_PROGRESS', label: 'In progress' },
+  { value: 'COMPLETED', label: 'Completed' },
+];
+
+export const TASK_STATUS_HEX = {
+  TODO: '#64748b',
+  IN_PROGRESS: '#0ea5e9',
+  COMPLETED: '#10b981',
+};
+
+export const TASK_PRIORITY_HEX = {
+  LOW: '#64748b',
+  MEDIUM: '#0ea5e9',
+  HIGH: '#ef4444',
+  URGENT: '#dc2626',
+};

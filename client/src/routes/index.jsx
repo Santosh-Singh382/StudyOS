@@ -6,6 +6,7 @@ import Register from '../pages/Register';
 import Subjects from '../pages/Subjects';
 import SubjectDetail from '../pages/SubjectDetail';
 import Topics from '../pages/Topics';
+import Tasks from '../pages/Tasks';
 import NotFound from '../pages/NotFound';
 import ProtectedRoute from '../components/ProtectedRoute';
 
@@ -43,6 +44,14 @@ const router = createBrowserRouter([
         element: (
           <ProtectedRoute>
             <Topics />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: 'tasks',
+        element: (
+          <ProtectedRoute>
+            <Tasks />
           </ProtectedRoute>
         ),
       },
