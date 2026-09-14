@@ -1,14 +1,20 @@
 import StatusPill from '../components/StatusPill';
+import { useAuth } from '../context/AuthContext';
 import { useHealth } from '../hooks/useHealth';
 
 const PIPELINE = ['Plan', 'Study', 'Track', 'Analyze', 'Improve'];
 
 export default function Home() {
+  const { user } = useAuth();
   const { status, error, checking, retry } = useHealth();
 
   return (
     <section className="mx-auto flex w-full max-w-3xl flex-1 flex-col items-center justify-center px-6 py-16 text-center">
-      <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-violet-600 text-xl font-bold text-white shadow-sm">
+      <p className="text-sm font-medium text-slate-400">
+        Signed in as <span className="text-slate-600">{user?.name}</span>
+      </p>
+
+      <div className="mt-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-violet-600 text-xl font-bold text-white shadow-sm">
         S
       </div>
 

@@ -18,6 +18,9 @@ export function errorHandler(err, req, res, next) {
   console.error(`${req.method} ${req.originalUrl} → ${statusCode}: ${message}`);
 
   const body = { success: false, message };
+  if (err.details) {
+    body.errors = err.details;
+  }
   if (!env.isProduction && err.stack) {
     body.stack = err.stack.split('\n').slice(0, 4);
   }
