@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+
+# Builds
+dist/
+
+# Env files (keep the example)
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+
+# Misc
+.vite/
