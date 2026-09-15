@@ -7,6 +7,7 @@ import SubjectProgressCard from '../components/dashboard/SubjectProgressCard';
 import TodayTasks from '../components/dashboard/TodayTasks';
 import RecentSessions from '../components/dashboard/RecentSessions';
 import AttentionTasks from '../components/dashboard/AttentionTasks';
+import DashboardFocusPanel from '../components/dashboard/DashboardFocusPanel';
 import TaskRow from '../components/dashboard/TaskRow';
 import DashboardSkeleton from '../components/dashboard/DashboardSkeleton';
 import DashboardEmptyState from '../components/dashboard/DashboardEmptyState';
@@ -89,6 +90,8 @@ export default function Dashboard() {
             </div>
             <QuickActions />
           </div>
+
+          <DashboardFocusPanel />
 
           <section
             aria-labelledby="subjects-heading"

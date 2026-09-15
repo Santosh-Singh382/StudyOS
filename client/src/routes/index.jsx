@@ -10,9 +10,14 @@ import Tasks from '../pages/Tasks';
 import Timer from '../pages/Timer';
 import NotFound from '../pages/NotFound';
 import PlaceholderPage from '../pages/PlaceholderPage';
+import Planner from '../pages/Planner';
+import Goals from '../pages/Goals';
+import GoalDetail from '../pages/GoalDetail';
+import Exams from '../pages/Exams';
+import ExamDetail from '../pages/ExamDetail';
 import ProtectedRoute from '../components/ProtectedRoute';
 
-const PLACEHOLDER_MODULES = ['goals', 'revision', 'mock-tests', 'analytics', 'ai-assistant', 'settings'];
+const PLACEHOLDER_MODULES = ['revision', 'mock-tests', 'analytics', 'ai-assistant', 'settings'];
 
 const router = createBrowserRouter([
   {
@@ -64,6 +69,46 @@ const router = createBrowserRouter([
         element: (
           <ProtectedRoute>
             <Timer />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: 'planner',
+        element: (
+          <ProtectedRoute>
+            <Planner />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: 'goals',
+        element: (
+          <ProtectedRoute>
+            <Goals />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: 'goals/:id',
+        element: (
+          <ProtectedRoute>
+            <GoalDetail />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: 'exams',
+        element: (
+          <ProtectedRoute>
+            <Exams />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: 'exams/:id',
+        element: (
+          <ProtectedRoute>
+            <ExamDetail />
           </ProtectedRoute>
         ),
       },

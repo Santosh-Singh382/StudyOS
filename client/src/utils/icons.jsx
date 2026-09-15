@@ -191,6 +191,16 @@ export function IconClock() {
   );
 }
 
+export function IconExam() {
+  return (
+    <Svg>
+      <path d="M5 4.5h11a2 2 0 0 1 2 2V20H7.5A2.5 2.5 0 0 1 5 17.5Z" />
+      <path d="M8 3.5v3M14 3.5v3M18 19.5A2.5 2.5 0 0 1 15.5 17H5" />
+      <path d="m9 14 1.6 1.6L13.5 12" />
+    </Svg>
+  );
+}
+
 export function IconFlame() {
   return (
     <Svg>
@@ -231,4 +241,5 @@ export const NAV_ICONS = {
   analytics: IconAnalytics,
   assistant: IconAssistant,
   settings: IconSettings,
+  exam: IconExam,
 };

@@ -5,6 +5,7 @@ import {
   IconTimer,
   IconPlanner,
   IconGoals,
+  IconExam,
   IconRevision,
   IconMockTests,
   IconAnalytics,
@@ -17,11 +18,12 @@ export const PRIMARY_NAV = [
   { to: '/subjects', label: 'Subjects', icon: IconSubjects },
   { to: '/tasks', label: 'Tasks', icon: IconTasks },
   { to: '/timer', label: 'Timer', icon: IconTimer },
-  { to: '/topics', label: 'Planner', icon: IconPlanner, end: false },
+  { to: '/planner', label: 'Planner', icon: IconPlanner },
 ];
 
 export const EXPLORE_NAV = [
   { to: '/goals', label: 'Goals', icon: IconGoals },
+  { to: '/exams', label: 'Exams', icon: IconExam },
   { to: '/revision', label: 'Revision', icon: IconRevision },
   { to: '/mock-tests', label: 'Mock Tests', icon: IconMockTests },
   { to: '/analytics', label: 'Analytics', icon: IconAnalytics },

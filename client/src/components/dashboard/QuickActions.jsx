@@ -5,7 +5,7 @@ const ACTIONS = [
   { to: '/tasks?new=1', label: 'Add Task', icon: IconTasks },
   { to: '/timer', label: 'Start Studying', icon: IconPlay },
   { to: '/subjects?new=1', label: 'Add Subject', icon: IconPlus },
-  { to: '/topics', label: 'Open Planner', icon: IconCalendar },
+  { to: '/planner', label: 'Open Planner', icon: IconCalendar },
 ];
 
 export default function QuickActions() {

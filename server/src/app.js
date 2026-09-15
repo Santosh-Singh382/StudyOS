@@ -8,6 +8,10 @@ import topicRoutes from './routes/topicRoutes.js';
 import taskRoutes from './routes/taskRoutes.js';
 import studySessionRoutes from './routes/studySessionRoutes.js';
 import analyticsRoutes from './routes/analyticsRoutes.js';
+import goalRoutes from './routes/goalRoutes.js';
+import milestoneRoutes from './routes/milestoneRoutes.js';
+import examRoutes from './routes/examRoutes.js';
+import plannerRoutes from './routes/plannerRoutes.js';
 import { notFound } from './middleware/notFound.js';
 import { errorHandler } from './middleware/errorHandler.js';
 
@@ -25,6 +29,10 @@ app.use('/api/topics', topicRoutes);
 app.use('/api/tasks', taskRoutes);
 app.use('/api/study-sessions', studySessionRoutes);
 app.use('/api/analytics', analyticsRoutes);
+app.use('/api/goals', goalRoutes);
+app.use('/api/milestones', milestoneRoutes);
+app.use('/api/exams', examRoutes);
+app.use('/api/planner', plannerRoutes);
 
 app.use(notFound);
 app.use(errorHandler);
