@@ -6,6 +6,7 @@ import authRoutes from './routes/authRoutes.js';
 import subjectRoutes from './routes/subjectRoutes.js';
 import topicRoutes from './routes/topicRoutes.js';
 import taskRoutes from './routes/taskRoutes.js';
+import studySessionRoutes from './routes/studySessionRoutes.js';
 import { notFound } from './middleware/notFound.js';
 import { errorHandler } from './middleware/errorHandler.js';
 
@@ -21,6 +22,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/subjects', subjectRoutes);
 app.use('/api/topics', topicRoutes);
 app.use('/api/tasks', taskRoutes);
+app.use('/api/study-sessions', studySessionRoutes);
 
 app.use(notFound);
 app.use(errorHandler);

@@ -7,6 +7,7 @@ import Subjects from '../pages/Subjects';
 import SubjectDetail from '../pages/SubjectDetail';
 import Topics from '../pages/Topics';
 import Tasks from '../pages/Tasks';
+import Timer from '../pages/Timer';
 import NotFound from '../pages/NotFound';
 import ProtectedRoute from '../components/ProtectedRoute';
 
@@ -52,6 +53,14 @@ const router = createBrowserRouter([
         element: (
           <ProtectedRoute>
             <Tasks />
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: 'timer',
+        element: (
+          <ProtectedRoute>
+            <Timer />
           </ProtectedRoute>
         ),
       },

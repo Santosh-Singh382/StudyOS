@@ -66,3 +66,24 @@ export const TASK_PRIORITY_HEX = {
   HIGH: '#ef4444',
   URGENT: '#dc2626',
 };
+
+export const SESSION_MODES = [
+  { value: 'STUDY', label: 'Study' },
+  { value: 'POMODORO_FOCUS', label: 'Pomodoro Focus' },
+  { value: 'POMODORO_SHORT_BREAK', label: 'Short Break' },
+  { value: 'POMODORO_LONG_BREAK', label: 'Long Break' },
+];
+
+export const SESSION_MODE_HEX = {
+  STUDY: '#7c3aed',
+  POMODORO_FOCUS: '#dc2626',
+  POMODORO_SHORT_BREAK: '#0ea5e9',
+  POMODORO_LONG_BREAK: '#10b981',
+};
+
+export const SESSION_STATUS_HEX = {
+  RUNNING: '#0ea5e9',
+  PAUSED: '#f59e0b',
+  COMPLETED: '#10b981',
+  CANCELLED: '#64748b',
+};

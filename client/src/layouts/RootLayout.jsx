@@ -30,7 +30,7 @@ export default function RootLayout() {
 
           <div className="flex items-center gap-2">
             <span className="mr-2 hidden rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-500 ring-1 ring-slate-200 sm:inline">
-              Phase 4 · Tasks
+              Phase 5 · Timer
             </span>
 
             {loading ? (
@@ -46,6 +46,9 @@ export default function RootLayout() {
                   </NavLink>
                   <NavLink to="/tasks" className={navLinkClass}>
                     Tasks
+                  </NavLink>
+                  <NavLink to="/timer" className={navLinkClass}>
+                    Timer
                   </NavLink>
                 </nav>
                 <span className="text-sm font-medium text-slate-600">
@@ -80,7 +83,7 @@ export default function RootLayout() {
       <footer className="border-t border-slate-200 bg-white">
         <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-1 px-6 py-4 text-xs text-slate-400 sm:flex-row">
           <span>StudyOS · Personal Study Operating System</span>
-          <span>Tasks · Phase 4</span>
+          <span>Study Timer · Phase 5</span>
         </div>
       </footer>
     </div>
