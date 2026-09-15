@@ -41,6 +41,15 @@ export default function Tasks() {
   const [submitError, setSubmitError] = useState(null);
 
   useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('new') === '1') {
+      setSubmitError(null);
+      setShowCreate(true);
+      window.history.replaceState({}, '', window.location.pathname);
+    }
+  }, []);
+
+  useEffect(() => {
     let active = true;
     Promise.all([getSubjects(), getTopics({ sort: 'name' })])
       .then(([subjectData, topicData]) => {

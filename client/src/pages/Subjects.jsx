@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useSubjects } from '../hooks/useSubjects';
@@ -16,6 +16,15 @@ export default function Subjects() {
   const [editing, setEditing] = useState(null);
   const [deleting, setDeleting] = useState(null);
   const [submitError, setSubmitError] = useState(null);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('new') === '1') {
+      setSubmitError(null);
+      setShowCreate(true);
+      window.history.replaceState({}, '', window.location.pathname);
+    }
+  }, []);
 
   const handleCreate = async (values) => {
     setSubmitError(null);

@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
 import RootLayout from '../layouts/RootLayout';
-import Home from '../pages/Home';
+import Dashboard from '../pages/Dashboard';
 import Login from '../pages/Login';
 import Register from '../pages/Register';
 import Subjects from '../pages/Subjects';
@@ -9,7 +9,10 @@ import Topics from '../pages/Topics';
 import Tasks from '../pages/Tasks';
 import Timer from '../pages/Timer';
 import NotFound from '../pages/NotFound';
+import PlaceholderPage from '../pages/PlaceholderPage';
 import ProtectedRoute from '../components/ProtectedRoute';
+
+const PLACEHOLDER_MODULES = ['goals', 'revision', 'mock-tests', 'analytics', 'ai-assistant', 'settings'];
 
 const router = createBrowserRouter([
   {
@@ -20,7 +23,7 @@ const router = createBrowserRouter([
         index: true,
         element: (
           <ProtectedRoute>
-            <Home />
+            <Dashboard />
           </ProtectedRoute>
         ),
       },
@@ -64,6 +67,14 @@ const router = createBrowserRouter([
           </ProtectedRoute>
         ),
       },
+      ...PLACEHOLDER_MODULES.map((module) => ({
+        path: module,
+        element: (
+          <ProtectedRoute>
+            <PlaceholderPage module={module} />
+          </ProtectedRoute>
+        ),
+      })),
       { path: 'login', element: <Login /> },
       { path: 'register', element: <Register /> },
       { path: '*', element: <NotFound /> },
